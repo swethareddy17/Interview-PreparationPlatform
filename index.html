@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Select Job Role</h2>
+        <form method="POST">
+            <select name="role">
+                <option value="python_developer">Python Developer</option>
+                <option value="data_scientist">Data Scientist</option>
+            </select>
+            <button type="submit">Start Interview</button>
+        </form>
+        {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    </div>
+</body>
+</html>

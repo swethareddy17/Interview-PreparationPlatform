@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interview Question</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h3>{{ question }}</h3>
+        <form action="/submit" method="POST">
+            <button type="button" id="recordBtn" class="record-btn">
+                <span>🎤</span> Start Recording
+            </button>
+            <textarea id="answerArea" name="answer" placeholder="Type your answer here or record it..."
+                rows="6"></textarea>
+            <button type="submit">Submit Answer</button>
+        </form>
+    </div>
+
+    <script>
+        const recordBtn = document.getElementById('recordBtn');
+        const answerArea = document.getElementById('answerArea');
+        let recognition;
+
+        if ('webkitSpeechRecognition' in window) {
+            recognition = new webkitSpeechRecognition();
+            recognition.continuous = true;
+            recognition.interimResults = true;
+            recognition.lang = 'en-US';
+
+            recognition.onstart = () => {
+                recordBtn.classList.add('recording');
+                recordBtn.innerHTML = '<span>⏹️</span> Stop Recording';
+            };
+
+            recognition.onend = () => {
+                recordBtn.classList.remove('recording');
+                recordBtn.innerHTML = '<span>🎤</span> Start Recording';
+            };
+
+            recognition.onresult = (event) => {
+                let interimTranscript = '';
+                let finalTranscript = '';
+
+                for (let i = event.resultIndex; i < event.results.length; ++i) {
+                    if (event.results[i].isFinal) {
+                        finalTranscript += event.results[i][0].transcript;
+                    } else {
+                        interimTranscript += event.results[i][0].transcript;
+                    }
+                }
+
+                // Append to existing text if any
+                if (finalTranscript) {
+                    // Check if there is already text and if it doesn't end with a space
+                    const currentText = answerArea.value;
+                    const prefix = (currentText && !currentText.endsWith(' ')) ? ' ' : '';
+                    answerArea.value += prefix + finalTranscript;
+                }
+            };
+
+            recognition.onerror = (event) => {
+                console.error("Speech recognition error", event.error);
+                recordBtn.classList.remove('recording');
+                recordBtn.innerHTML = '<span>🎤</span> Start Recording (Error)';
+            }
+
+            recordBtn.addEventListener('click', () => {
+                if (recordBtn.classList.contains('recording')) {
+                    recognition.stop();
+                } else {
+                    recognition.start();
+                }
+            });
+
+        } else {
+            recordBtn.style.display = 'none';
+            console.log("Web Speech API not supported in this browser.");
+        }
+    </script>
+</body>
+
+</html>

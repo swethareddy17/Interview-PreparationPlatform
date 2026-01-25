@@ -1,0 +1,32 @@
+[
+    {
+        "role": "Python Developer",
+        "question": "What is the difference between list and tuple?",
+        "score": 50
+    },
+    {
+        "role": "python_developer",
+        "question": "What is the difference between list and tuple?",
+        "score": 0
+    },
+    {
+        "role": "python_developer",
+        "question": "What is the difference between list and tuple?",
+        "score": 0
+    },
+    {
+        "role": "data_scientist",
+        "question": "What is overfitting?",
+        "score": 0
+    },
+    {
+        "role": "data_scientist",
+        "question": "What is overfitting?",
+        "score": 0
+    },
+    {
+        "role": "python_developer",
+        "question": "Explain decorators in Python.",
+        "score": 0
+    }
+]

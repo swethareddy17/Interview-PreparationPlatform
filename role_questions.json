@@ -1,0 +1,42 @@
+{
+    "python_developer": [
+        {
+            "question": "What is the difference between list and tuple?",
+            "keywords": [
+                "mutable",
+                "immutable",
+                "syntax",
+                "performance"
+            ]
+        },
+        {
+            "question": "Explain decorators in Python.",
+            "keywords": [
+                "function",
+                "wrapper",
+                "@",
+                "modify"
+            ]
+        }
+    ],
+    "data_scientist": [
+        {
+            "question": "What is overfitting?",
+            "keywords": [
+                "training data",
+                "noise",
+                "generalize",
+                "complexity"
+            ]
+        },
+        {
+            "question": "Explain p-value.",
+            "keywords": [
+                "hypothesis",
+                "null",
+                "significance",
+                "probability"
+            ]
+        }
+    ]
+}

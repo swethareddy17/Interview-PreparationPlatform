@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Evaluation Result</h2>
+        <p><strong>Score:</strong> {{ score }}%</p>
+        <p><strong>Feedback:</strong> {{ feedback }}</p>
+        <a href="/">Try Another Question</a>
+    </div>
+</body>
+
+</html>
