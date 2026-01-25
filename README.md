@@ -160,5 +160,4 @@ The AI Interview Preparation Platform provides an effective and automated soluti
 Pre Final Year B.Tech (Information Technology)
 Project: AI Interview Preparation Platform
 
-```
 
