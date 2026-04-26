@@ -1,8 +1,11 @@
 import json
 import os
-from app.config import BASE_DIR
+from config import BASE_DIR
 
-RESULTS_FILE = os.path.join(BASE_DIR, "..", "data", "results.json")
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+RESULTS_FILE = os.path.join(BASE_DIR, "results.json")
 
 def save_result(role, question, score):
     result_data = {

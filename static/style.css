@@ -1,0 +1,121 @@
+:root {
+    --primary: #a5b4fc;
+    --primary-dark: #818cf8;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card */
+.container {
+    background: var(--card);
+    padding: 2rem;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Headings */
+h1, h2 {
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+/* Inputs */
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-dark);
+    box-shadow: 0 0 0 2px rgba(165,180,252,0.3);
+}
+
+/* Buttons */
+button {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+/* Quit button */
+.quit {
+    background: #fca5a5;
+}
+
+.quit:hover {
+    background: #ef4444;
+}
+
+/* Question */
+.question {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    color: var(--text);
+}
+
+/* Feedback */
+.feedback {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f1f5f9;
+    border-radius: 8px;
+    color: var(--text);
+}
+
+/* Error */
+.error {
+    margin-top: 1rem;
+    color: #ef4444;
+}
+
+/* Buttons row */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,42 +1,63 @@
 {
-    "python_developer": [
-        {
-            "question": "What is the difference between list and tuple?",
-            "keywords": [
-                "mutable",
-                "immutable",
-                "syntax",
-                "performance"
-            ]
-        },
-        {
-            "question": "Explain decorators in Python.",
-            "keywords": [
-                "function",
-                "wrapper",
-                "@",
-                "modify"
-            ]
-        }
-    ],
-    "data_scientist": [
-        {
-            "question": "What is overfitting?",
-            "keywords": [
-                "training data",
-                "noise",
-                "generalize",
-                "complexity"
-            ]
-        },
-        {
-            "question": "Explain p-value.",
-            "keywords": [
-                "hypothesis",
-                "null",
-                "significance",
-                "probability"
-            ]
-        }
-    ]
+  "python": [
+    { "question": "What is Python?", "keywords": ["language", "interpreted"] },
+    { "question": "What are Python data types?", "keywords": ["list", "tuple", "dict"] },
+    { "question": "Explain OOP concepts.", "keywords": ["class", "object", "inheritance"] },
+    { "question": "What is a decorator?", "keywords": ["function", "wrapper"] },
+    { "question": "What is list comprehension?", "keywords": ["list", "expression"] },
+    { "question": "Difference between list and tuple?", "keywords": ["mutable", "immutable"] },
+    { "question": "What is a lambda function?", "keywords": ["anonymous", "function"] },
+    { "question": "Explain exception handling.", "keywords": ["try", "except"] },
+    { "question": "What is PEP 8?", "keywords": ["style", "guidelines"] },
+    { "question": "What are generators?", "keywords": ["yield", "iterator"] }
+  ],
+
+  "java": [
+    { "question": "What is Java?", "keywords": ["oop", "platform independent"] },
+    { "question": "Explain JVM.", "keywords": ["virtual machine", "bytecode"] },
+    { "question": "What is inheritance?", "keywords": ["extends", "parent"] },
+    { "question": "Difference between JDK, JRE, JVM?", "keywords": ["jdk", "jre", "jvm"] },
+    { "question": "What is polymorphism?", "keywords": ["overloading", "overriding"] },
+    { "question": "What is encapsulation?", "keywords": ["data hiding", "class"] },
+    { "question": "What is abstraction?", "keywords": ["abstract", "interface"] },
+    { "question": "What are collections?", "keywords": ["list", "set", "map"] },
+    { "question": "What is multithreading?", "keywords": ["thread", "parallel"] },
+    { "question": "What is exception handling?", "keywords": ["try", "catch"] }
+  ],
+
+  "web": [
+    { "question": "What is HTML?", "keywords": ["markup", "structure"] },
+    { "question": "What is CSS?", "keywords": ["style", "design"] },
+    { "question": "What is JavaScript?", "keywords": ["scripting", "browser"] },
+    { "question": "Difference between GET and POST?", "keywords": ["http", "request"] },
+    { "question": "What is DOM?", "keywords": ["document", "object"] },
+    { "question": "What is responsive design?", "keywords": ["mobile", "media"] },
+    { "question": "What is Flexbox?", "keywords": ["layout", "flex"] },
+    { "question": "What is API?", "keywords": ["interface", "data"] },
+    { "question": "What is JSON?", "keywords": ["data", "format"] },
+    { "question": "What is a frontend framework?", "keywords": ["react", "angular"] }
+  ],
+
+  "data_scientist": [
+    { "question": "What is Data Science?", "keywords": ["data", "analysis", "insights"] },
+    { "question": "What are the steps in a Data Science project?", "keywords": ["collection", "cleaning", "modeling"] },
+    { "question": "What is machine learning?", "keywords": ["algorithm", "prediction"] },
+    { "question": "Difference between supervised and unsupervised learning?", "keywords": ["labeled", "unlabeled"] },
+    { "question": "What is overfitting?", "keywords": ["model", "training"] },
+    { "question": "What is underfitting?", "keywords": ["poor", "model"] },
+    { "question": "Explain regression.", "keywords": ["continuous", "prediction"] },
+    { "question": "Explain classification.", "keywords": ["categories", "labels"] },
+    { "question": "What is a confusion matrix?", "keywords": ["tp", "fp", "accuracy"] },
+    { "question": "What is precision and recall?", "keywords": ["precision", "recall"] },
+    { "question": "What is cross-validation?", "keywords": ["validation", "split"] },
+    { "question": "What is feature engineering?", "keywords": ["features", "data"] },
+    { "question": "What is normalization?", "keywords": ["scaling", "data"] },
+    { "question": "What is standardization?", "keywords": ["mean", "variance"] },
+    { "question": "What is pandas?", "keywords": ["dataframe", "python"] },
+    { "question": "What is NumPy?", "keywords": ["array", "numerical"] },
+    { "question": "What is matplotlib?", "keywords": ["plot", "visualization"] },
+    { "question": "What is seaborn?", "keywords": ["visualization", "graphs"] },
+    { "question": "What is SQL?", "keywords": ["database", "query"] },
+    { "question": "What is big data?", "keywords": ["volume", "velocity", "variety"] }
+  ]
 }

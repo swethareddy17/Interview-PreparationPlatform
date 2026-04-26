@@ -1,4 +1,4 @@
-from core.text_processing import preprocess_text
+from text_processing import preprocess_text
 
 def evaluate_answer(answer, keywords):
     tokens = preprocess_text(answer)

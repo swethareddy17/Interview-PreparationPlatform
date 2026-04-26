@@ -1,6 +1,6 @@
 import json
 import random
-from app.config import DATA_PATH
+from config import DATA_PATH
 
 def load_questions():
     with open(DATA_PATH, "r") as f:

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Interview Question</h2>
+
+    <p class="question">{{ question }}</p>
+
+    <form method="POST" action="/submit">
+        <textarea name="answer" placeholder="Type your answer..." required></textarea>
+        <button type="submit">Submit Answer</button>
+    </form>
+
+    {% if score %}
+        <div class="feedback">
+            <p><strong>Score:</strong> {{ score }}</p>
+            <p>{{ feedback }}</p>
+        </div>
+    {% endif %}
+
+    <div class="actions">
+        <a href="/interview"><button>Next Question</button></a>
+        <a href="/quit"><button class="quit">Quit Interview</button></a>
+    </div>
+</div>
+
+</body>
+</html>

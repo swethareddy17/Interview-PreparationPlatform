@@ -28,5 +28,30 @@
         "role": "python_developer",
         "question": "Explain decorators in Python.",
         "score": 0
+    },
+    {
+        "role": "python_developer",
+        "question": "What is the difference between list and tuple?",
+        "score": 50
+    },
+    {
+        "role": "data_scientist",
+        "question": "What is overfitting?",
+        "score": 50
+    },
+    {
+        "role": "data_scientist",
+        "question": "What is overfitting?",
+        "score": 50
+    },
+    {
+        "role": "python_developer",
+        "question": "Explain decorators in Python.",
+        "score": 0
+    },
+    {
+        "role": "web",
+        "question": "Multiple Questions",
+        "score": 100.0
     }
 ]
