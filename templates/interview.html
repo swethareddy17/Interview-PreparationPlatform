@@ -4,30 +4,66 @@
     <title>Interview</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
 <div class="container">
-    <h2>Interview Question</h2>
 
-    <p class="question">{{ question }}</p>
+    <h2>🎯 Interview in Progress</h2>
 
+    <!-- QUESTION CARD -->
+    <div class="question-card">
+        <p class="question">{{ question }}</p>
+    </div>
+
+    <!-- ANSWER FORM -->
     <form method="POST" action="/submit">
-        <textarea name="answer" placeholder="Type your answer..." required></textarea>
+
+        <!-- TEXT AREA -->
+        <textarea id="answer" name="answer" placeholder="Type or speak your answer..." required></textarea>
+
+        <!-- VOICE BUTTON -->
+        <button type="button" class="voice-btn" onclick="startRecording()">
+            🎤 Speak Answer
+        </button>
+
         <button type="submit">Submit Answer</button>
     </form>
 
+    <!-- FEEDBACK -->
     {% if score %}
-        <div class="feedback">
-            <p><strong>Score:</strong> {{ score }}</p>
-            <p>{{ feedback }}</p>
-        </div>
+    <div class="feedback-card">
+        <h3>📊 Feedback</h3>
+        <p><strong>Score:</strong> {{ score }}</p>
+        <p>{{ feedback }}</p>
+    </div>
     {% endif %}
 
+    <!-- ACTION BUTTONS -->
     <div class="actions">
         <a href="/interview"><button>Next Question</button></a>
-        <a href="/quit"><button class="quit">Quit Interview</button></a>
+        <a href="/quit"><button class="quit">End Interview</button></a>
     </div>
+
 </div>
+
+<!-- VOICE SCRIPT -->
+<script>
+function startRecording() {
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.lang = "en-US";
+
+    recognition.start();
+
+    recognition.onresult = function(event) {
+        document.getElementById("answer").value = event.results[0][0].transcript;
+    };
+
+    recognition.onerror = function() {
+        alert("Voice recognition not supported in this browser");
+    };
+}
+</script>
 
 </body>
 </html>

@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AI Interview</title>
+    <title>AI Interview Preparation Platform</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
 <div class="container">
-    <h1>✨ AI Interview Coach</h1>
-    <p style="color:#64748b;">Practice interviews smartly</p>
 
+    <!-- HEADER -->
+    <h1>🤖 AI Interview Preparation Platform</h1>
+    <p class="subtitle">Practice. Improve. Get Job Ready 🚀</p>
+
+    <!-- ROLE SELECTION -->
     <form method="POST">
 
-        <!-- ROLE DROPDOWN -->
+        <label>Select Role</label>
+
         <select name="role" required>
-            <option value="">-- Select Role --</option>
-            <option value="python">🐍 Python</option>
-            <option value="java">☕ Java</option>
-            <option value="web">🌐 Web Development</option>
+            <option value="">-- Choose Role --</option>
+            <option value="python">🐍 Python Developer</option>
+            <option value="java">☕ Java Developer</option>
+            <option value="web">🌐 Web Developer</option>
             <option value="data_scientist">📊 Data Scientist</option>
         </select>
 
         <button type="submit">Start Interview</button>
     </form>
 
+    <!-- FEATURES SECTION -->
+    <div class="features">
+        <div class="card">🎯 Real Interview Questions</div>
+        <div class="card">📊 Instant Feedback</div>
+        <div class="card">🔁 Unlimited Practice</div>
+    </div>
+
     {% if error %}
         <p class="error">{{ error }}</p>
     {% endif %}
+
 </div>
 
 </body>

@@ -53,5 +53,15 @@
         "role": "web",
         "question": "Multiple Questions",
         "score": 100.0
+    },
+    {
+        "role": "java",
+        "question": "Multiple Questions",
+        "score": 0.0
+    },
+    {
+        "role": "python",
+        "question": "Multiple Questions",
+        "score": 100.0
     }
 ]

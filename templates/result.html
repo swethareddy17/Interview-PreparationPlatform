@@ -4,15 +4,20 @@
     <title>Result</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
 <div class="container">
-    <h1>Final Result</h1>
 
-    <p><strong>Average Score:</strong> {{ score }}</p>
-    <p>{{ feedback }}</p>
+    <h2>🏁 Interview Completed</h2>
 
-    <a href="/"><button>Start Again</button></a>
+    <div class="feedback-card">
+        <p><strong>Final Score:</strong> {{ score }}</p>
+        <p>{{ feedback }}</p>
+    </div>
+
+    <a href="/"><button>🔁 Start Again</button></a>
+
 </div>
 
 </body>
