@@ -1,47 +1,35 @@
+🚀 Interview-PreparationPlatform
 
-# AI Interview Preparation Platform (Flask Web Application)
+A Flask-based web application designed to help students and job seekers prepare for technical interviews through automated question generation, answer evaluation, and feedback.
 
-## Abstract
-The AI Interview Preparation Platform is a Flask-based web application designed to help students and job seekers prepare for technical interviews. The system generates role-specific interview questions, evaluates user responses using structured text-processing logic, and provides automated scoring and qualitative feedback. The application is built using a modular and scalable architecture suitable for academic evaluation and future AI enhancements.
+📌 Project Overview
 
----
+The Interview-PreparationPlatform simulates real interview scenarios by generating role-based questions and evaluating user responses using structured text-processing techniques. It provides instant scoring and feedback, helping users improve their performance effectively.
 
-## Problem Statement
-Traditional interview preparation relies on static question banks and self-assessment, which lacks objectivity and structured feedback. Candidates often struggle to evaluate the quality of their answers and identify gaps in conceptual understanding. This project addresses the need for an automated interview preparation system that simulates interview scenarios and provides consistent, logic-based evaluation.
-
----
-
-## Objectives
-- To design a role-based interview question generation system  
-- To evaluate candidate answers using text-processing techniques  
-- To provide automated scoring and structured feedback  
-- To implement a scalable Flask-based web architecture  
-- To ensure modularity and maintainability for future enhancements  
-
----
-
-## System Architecture
-The application follows a layered architecture:
-
-User Interface (HTML Templates)  
-→ Flask Routes (Controller Layer)  
-→ Core Logic Modules (Question Generation, Evaluation, Feedback)  
-→ Data Layer (JSON Storage)
-
----
-
-## Project Structure
-```
-
+🎯 Features
+✅ Role-based interview question generation
+✅ Automated answer evaluation using keyword matching
+✅ Instant score calculation
+✅ Structured feedback for improvement
+✅ Simple and user-friendly interface
+✅ Fully offline (no external APIs required)
+✅ Modular and scalable architecture
+🛠️ Tech Stack
+Backend: Python, Flask
+Frontend: HTML, CSS
+Data Storage: JSON
+Text Processing: Regex, Keyword Matching
+Architecture: Modular / MVC-style
+📂 Project Structure
 AI/
 │
 ├── app/
-│   ├── **init**.py
+│   ├── __init__.py
 │   ├── routes.py
 │   └── config.py
 │
 ├── core/
-│   ├── **init**.py
+│   ├── __init__.py
 │   ├── question_generator.py
 │   ├── evaluator.py
 │   ├── feedback.py
@@ -51,7 +39,7 @@ AI/
 │   └── role_questions.json
 │
 ├── storage/
-│   ├── **init**.py
+│   ├── __init__.py
 │   └── results.py
 │
 ├── templates/
@@ -63,101 +51,52 @@ AI/
 │   └── style.css
 │
 └── run.py
-
-````
-
----
-
-## Technologies Used
-- Programming Language: Python  
-- Web Framework: Flask  
-- Text Processing: Regex, Keyword Matching  
-- Frontend: HTML, CSS  
-- Data Storage: JSON  
-- Architecture Pattern: Modular / MVC-style  
-
----
-
-## Module Description
-
-### Question Generation Module
-Selects interview questions based on the chosen job role from a structured dataset.
-
-### Text Processing Module
-Normalizes user input by converting text to lowercase, removing special characters, and tokenizing input.
-
-### Answer Evaluation Module
-Evaluates answers by matching predefined keywords and calculates a percentage score based on coverage.
-
-### Feedback Module
-Generates qualitative feedback based on the computed score to guide improvement.
-
-### Storage Module
-Stores interview results locally for future analysis.
-
----
-
-## How to Run the Application
-
-### Prerequisites
-- Python 3.8 or higher
-- Flask installed
-
-### Installation
-```bash
+⚙️ Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/sure-trust/K.NAGASWETHA-g30-fsd.git
+cd K.NAGASWETHA-g30-fsd
+2️⃣ Create Virtual Environment (Optional but Recommended)
+python -m venv venv
+venv\Scripts\activate   # On Windows
+3️⃣ Install Dependencies
 pip install flask
-````
-
-### Execution
-
-```bash
+▶️ Run the Application
 python run.py
-```
 
-Open browser and navigate to:
+Now open your browser and go to:
 
-```
 http://127.0.0.1:5000
-```
+🧠 How It Works
+User selects a job role
+System fetches relevant interview questions
+User submits answer
+System processes text and evaluates using keywords
+Score and feedback are displayed instantly
+📸 Sample Output
+Interview question displayed
+User submits answer
+Score and feedback shown
+🌟 Advantages
+Works completely offline
+Provides consistent evaluation
+Easy to use and lightweight
+Suitable for academic and portfolio projects
+🔮 Future Enhancements
+NLP-based semantic evaluation (TF-IDF, cosine similarity)
+User login and performance tracking
+Admin dashboard
+Integration with AI/LLM models
+Cloud deployment
+👩‍💻 Author
 
----
+Kamana Naga Swetha
+B.Tech (Computer Science)
+Final Year Student
 
-## Sample Output
+🔗 Repository Link
 
-* Role-based interview question displayed on screen
-* User submits answer through web interface
-* System displays score and feedback instantly
+👉 https://github.com/sure-trust/K.NAGASWETHA-g30-fsd.git
 
----
+⭐ Support
 
-## Advantages
-
-* Fully offline system (no external APIs required)
-* Consistent and unbiased evaluation
-* Modular and scalable design
-* Suitable for academic and placement portfolios
-
----
-
-## Future Enhancements
-
-* Semantic answer evaluation using NLP techniques (TF-IDF, cosine similarity)
-* User authentication and performance tracking
-* Admin dashboard for question management
-* Integration with AI/LLM models
-* Deployment on cloud platforms
-
----
-
-## Conclusion
-
-The AI Interview Preparation Platform provides an effective and automated solution for interview practice. Its modular Flask-based design ensures maintainability, scalability, and suitability for final-year academic evaluation as well as real-world extension.
-
----
-
-## Author
-
-Pre Final Year B.Tech (Information Technology)
-Project: AI Interview Preparation Platform
-
-
+If you like this project, give it a ⭐ on GitHub!
